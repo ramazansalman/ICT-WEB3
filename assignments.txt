@@ -1,0 +1,33 @@
+-------------------------------------------------------------------
++ assignment-1                                                    +
++ https://m7sm4-2iaaa-aaaab-qabra-cai.raw.ic0.app/?tag=2629029340 +
++                                                                 +
++ code below                                                      +
+-------------------------------------------------------------------
+
+actor calculator {
+  var hucre : Int = 0;
+  public func toplama(s : Int) : async Int {
+    hucre += s;
+    hucre
+  };
+  public func cikarma(s : Int) : async Int {
+    hucre -= s;
+    hucre
+  };
+  public func carmpa(s : Int) : async Int {
+    hucre *= s;
+    hucre
+  };
+  public func bolme(s : Int) : async ?Int {
+    if (s == 0) {
+      null
+    } else {
+      hucre /= s;
+      ?hucre
+    }
+  };
+  public func temizle() : async () {
+    hucre := 0
+  }
+}
